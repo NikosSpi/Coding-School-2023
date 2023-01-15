@@ -13,7 +13,7 @@ namespace Session5
             int divisors = 0;
             int integer;
 
-            Console.WriteLine("Please give an integer to find the prime numbers: ");
+            Console.WriteLine("\nPlease give an integer to find the prime numbers: ");
             integer = Convert.ToInt32(Console.ReadLine());
 
             List<int> numbers = new List<int>();
@@ -42,7 +42,7 @@ namespace Session5
                 Console.WriteLine("prime number: " + item);
             }
 
-            return "these are all the prime numbers";
+            return "these are all the prime numbers\n";
 
         }
     }
