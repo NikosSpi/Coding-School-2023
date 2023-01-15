@@ -13,10 +13,10 @@ namespace Session5
             int product = 1;
             int integer, choose;
 
-            Console.WriteLine("Please give an ineteger: ");
+            Console.WriteLine("\nPlease give an integer: ");
             integer = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine("Please type 1 if you need to compute the sum or 2 if you need to compute the product: ");
+            Console.WriteLine("\nPlease type 1 if you need to compute the sum or 2 if you need to compute the product: ");
             choose = Convert.ToInt32(Console.ReadLine());
             if (choose == 1)
             {
