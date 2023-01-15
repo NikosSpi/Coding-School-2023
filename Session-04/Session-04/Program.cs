@@ -1,4 +1,5 @@
 ﻿using Session_04;
+using SessionB;
 using System.Globalization;
 
 internal class Program
@@ -24,8 +25,9 @@ internal class Program
         int div = numOne / numTwo;
 
 
+
         ExTwo exTwo = new ExTwo();
-        Console.WriteLine(exTwo.GetNums());
+        Console.WriteLine(exTwo.GetNums(sum));
 
         Console.WriteLine("The sum of the two numbers is: " + sum);
         Console.WriteLine("The division of the two numbers is: " + div);

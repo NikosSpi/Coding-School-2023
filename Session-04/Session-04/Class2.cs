@@ -1,13 +1,13 @@
 ﻿using System;
 
-namespace Session_04
+namespace SessionB
 {
 
     public class ExTwo
     {
 
 
-        public int GetNums()
+        public void GetNums()
         {
 
             int numOne = 148;
