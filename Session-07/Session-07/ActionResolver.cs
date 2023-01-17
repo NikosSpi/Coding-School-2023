@@ -40,6 +40,30 @@ namespace Session_07
 
             return 0;
           }
+        public string Upper(string phrase)
+        {
+            Console.WriteLine("Give your phrase");
+            string phrase = Console.ReadLine();
+            string upperCase = phrase.ToUpper();
+            Console.WriteLine(upperCase);
+
+            return upperCase;
+            
+        }
+        public string Reverse(string input)
+        {
+                Console.WriteLine("Give your input");
+                string input = Console.ReadLine();
+                string namereversed = "";
+                for (int i = input.Length - 1; i >= 0; i--)
+                {
+                    namereversed = namereversed + input[i];
+
+                }
+
+
+                return namereversed;
+        }
         /*public ActionResponse Execute(ActionRequest request)
         {
 
