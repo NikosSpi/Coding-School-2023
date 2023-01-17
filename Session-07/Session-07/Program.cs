@@ -19,7 +19,7 @@ ActionRequest request = new ActionRequest();
 ActionResponse response = new ActionResponse();
 
 ActionResolver resolver = new ActionResolver();
-Console.WriteLine(resolver);
+
 //response = resolver.Execute(request);
 
 // DISPLAY MESSAGES FROM LOGGER

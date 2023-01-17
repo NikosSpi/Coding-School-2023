@@ -28,7 +28,7 @@ namespace Session_07
         {
             requestID = new Guid();
         }
-        public ActionRequest(Guid requestID, ActionEnum actionEnum, int number)
+        public ActionRequest(Guid requestID, ActionEnum actionEnum, int number, string phrase, string input)
         {
             switch (actionEnum)
             {
@@ -36,8 +36,10 @@ namespace Session_07
                     convert = Convert(number);
                     break;
                 case ActionEnum.Uppercase:
+                    upperCase = UpperCase(phrase);
                     break;
                 case ActionEnum.Reverse:
+                    reverse = Reverse(input);
                     break;
                 default:
                     break;
