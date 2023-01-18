@@ -3,8 +3,8 @@ using Session_07;
 
 ActionRequest request = new ActionRequest()
 {
-    Input = "mpla mplaa m",
-    Action = ActionEnum.Uppercase
+    Input = "mplaaam",
+    Action = ActionEnum.Reverse
 };
 
 ActionResponse response = new ActionResponse();

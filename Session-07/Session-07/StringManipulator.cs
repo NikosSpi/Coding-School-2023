@@ -57,7 +57,16 @@ namespace Session_07
 
         public override string Manipulate()
         {
-            return string.Empty;
+            string namereversed = "";
+            for (int i = Text.Length - 1; i >= 0; i--)
+            {
+                namereversed = namereversed + Text
+                    [i];
+
+            }
+
+
+            return namereversed;
         }
 
     }

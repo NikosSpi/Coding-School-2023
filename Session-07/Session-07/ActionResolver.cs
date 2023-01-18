@@ -118,7 +118,10 @@ namespace Session_07
         {
             // “Reverse” you must check if the Input is a string and reverse it.
 
-            return string.Empty;
+            StringReverse convert = new StringReverse();
+            convert.Text = input;
+
+            return convert.Manipulate();
 
         }
 
