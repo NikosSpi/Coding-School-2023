@@ -46,7 +46,6 @@ namespace Session_07
                     case ActionEnum.Convert:
                         Log("CONVERT");
                         response.Output = Convert(request.Input);
-                        Log(response.Output);
                         break;
 
                     case ActionEnum.Uppercase:
@@ -72,6 +71,8 @@ namespace Session_07
             }
             finally
             {
+                Log(response.Output);
+
                 Log("EXECUTION END");
             }
 
@@ -107,7 +108,10 @@ namespace Session_07
 
 
 
-            return input.ToUpper();
+            StringUppercase convert = new StringUppercase();
+            convert.Text = input;
+
+            return convert.Manipulate();
         }
 
         public string Reverse(string input)

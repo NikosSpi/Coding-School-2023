@@ -47,7 +47,6 @@ namespace Session_07
                     newNumber += (a[i]).ToString();
                 }
             }
-
             return newNumber;
            
         }
@@ -58,7 +57,6 @@ namespace Session_07
 
         public override string Manipulate()
         {
-
             return string.Empty;
         }
 
@@ -70,7 +68,22 @@ namespace Session_07
         public override string Manipulate()
         {
 
-            return string.Empty;
+            if (!(Text is string)) {
+                return "no string";
+            }
+
+            string[] words = Text.Split(null);
+
+            string bigger =  "";
+            for (int i = 0; i < words.Length; i++)
+            {
+                if (bigger.Length < words[i].Length) {
+                    bigger = words[i];
+                }
+            }
+
+            
+            return bigger.ToUpper();
         }
     }
 

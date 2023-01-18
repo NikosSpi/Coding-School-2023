@@ -3,8 +3,8 @@ using Session_07;
 
 ActionRequest request = new ActionRequest()
 {
-    Input = "11",
-    Action = ActionEnum.Convert
+    Input = "mpla mplaa m",
+    Action = ActionEnum.Uppercase
 };
 
 ActionResponse response = new ActionResponse();
