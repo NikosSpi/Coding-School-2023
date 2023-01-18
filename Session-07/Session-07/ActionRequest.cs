@@ -6,48 +6,24 @@ using System.Threading.Tasks;
 
 namespace Session_07
 {
-    public enum ActionEnum
+
+    public class ActionEntity
     {
-        Convert,
-        Uppercase,
-        Reverse
+
+        public Guid RequestID { get; set; }
     }
 
 
-    public class ActionRequest
+    public class ActionRequest : ActionEntity
     {
-        public Guid RequestID { get; set; }
+
         public string Input { get; set; }
         public ActionEnum Action { get; set; }
 
         public ActionRequest()
         {
-
+            RequestID = Guid.NewGuid();
         }
-        public ActionRequest(Guid requestID)
-        {
-            requestID = new Guid();
-        }
-        public ActionRequest(Guid requestID, ActionEnum actionEnum, int number, string phrase, string input)
-        {
-            switch (actionEnum)
-            {
-                case ActionEnum.Convert:
-                    convert = Convert(number);
-                    break;
-                case ActionEnum.Uppercase:
-                    upperCase = UpperCase(phrase);
-                    break;
-                case ActionEnum.Reverse:
-                    reverse = Reverse(input);
-                    break;
-                default:
-                    break;
-            }
-
-        }
-
-
 
     }
 }

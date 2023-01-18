@@ -7,9 +7,69 @@ using System.Threading.Tasks;
 namespace Session_07
 {
 
+    public class Message
+    {
+
+        public Guid ID { get; set; }
+        public DateTime TimeStamp { get; set; }
+
+        // Change from class diagram: Message property cannot be the same as class name
+        public string Text { get; set; }
+
+        public Message()
+        {
+            ID = Guid.NewGuid();
+        }
+
+        public Message(string text)
+        {
+            ID = Guid.NewGuid();
+            TimeStamp = DateTime.Now;
+            Text = text;
+        }
+    }
 
     public class MessageLogger
     {
-        public Messages[] Messages { get; set; } 
+
+        //  PROPERTIES
+        public Message[] Messages { get; set; }
+
+        private int _messageCounter = 0;
+
+        // CTOR
+        public MessageLogger()
+        {
+            Messages = new Message[1000];
+        }
+
+
+        // METHODS
+        public void ReadAll()
+        {
+            foreach (Message message in Messages)
+            {
+
+                if (message != null)
+                {
+                    Console.WriteLine(message.Text);
+                }
+
+            }
+        }
+
+        public void Clear()
+        {
+            Messages = new Message[1000];
+            _messageCounter = 0;
+        }
+
+        public void Write(Message message)
+        {
+
+            Messages[_messageCounter] = message;
+            _messageCounter++;
+        }
+
     }
 }
