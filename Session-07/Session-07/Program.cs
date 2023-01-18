@@ -3,8 +3,8 @@ using Session_07;
 
 ActionRequest request = new ActionRequest()
 {
-    Input = "Fotis",
-    Action = ActionEnum.Reverse
+    Input = "11",
+    Action = ActionEnum.Convert
 };
 
 ActionResponse response = new ActionResponse();

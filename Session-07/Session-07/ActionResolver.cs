@@ -46,11 +46,13 @@ namespace Session_07
                     case ActionEnum.Convert:
                         Log("CONVERT");
                         response.Output = Convert(request.Input);
+                        Log(response.Output);
                         break;
 
                     case ActionEnum.Uppercase:
                         Log("UPPERCASE");
                         response.Output = Uppercase(request.Input);
+                       
                         break;
 
                     case ActionEnum.Reverse:
