@@ -12,7 +12,11 @@ namespace Session_09
 
         enum CalcOperation
         {
-            Addition
+            Addition,
+            Subtraction,
+            Multiplication,
+            Division,
+            RaiseToPower
         }
 
         public Form1()
@@ -271,6 +275,30 @@ namespace Session_09
                     _result = addition.Do(_value1, _value2);
 
                     break;
+                case CalcOperation.Subtraction:
+
+                    Subtraction subtraction = new Subtraction();
+                    _result = subtraction.Do(_value1, _value2);
+
+                    break;
+                case CalcOperation.Multiplication:
+
+                    Multiplication multiplication = new Multiplication();
+                    _result = multiplication.Do(_value1, _value2);
+
+                    break;
+                case CalcOperation.Division:
+
+                    Division division = new Division();
+                    _result = division.Do(_value1, _value2);
+
+                    break;
+                case CalcOperation.RaiseToPower:
+
+                    RaiseToPower raiseToPower = new RaiseToPower();
+                    _result = raiseToPower.Do(_value1, _value2);
+
+                    break;
 
                 default:
                     break;
@@ -282,6 +310,30 @@ namespace Session_09
         {
             ctrlDisplay.Text += " + ";
             _calcOperation = CalcOperation.Addition;
+        }
+
+        private void ctrlSubtraction_Click(object sender, EventArgs e)
+        {
+            ctrlDisplay.Text += " - ";
+            _calcOperation = CalcOperation.Subtraction;
+        }
+
+        private void ctrlMultiplication_Click(object sender, EventArgs e)
+        {
+            ctrlDisplay.Text += " * ";
+            _calcOperation = CalcOperation.Multiplication;
+        }
+
+        private void ctrlDevision_Click(object sender, EventArgs e)
+        {
+            ctrlDisplay.Text += " / ";
+            _calcOperation = CalcOperation.Division;
+        }
+
+        private void ctrlPower_Click(object sender, EventArgs e)
+        {
+            ctrlDisplay.Text += " ^ ";
+            _calcOperation = CalcOperation.RaiseToPower;
         }
     }
     

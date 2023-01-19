@@ -215,6 +215,7 @@
             this.ctrlSubtraction.TabIndex = 14;
             this.ctrlSubtraction.Text = "-";
             this.ctrlSubtraction.UseVisualStyleBackColor = false;
+            this.ctrlSubtraction.Click += new System.EventHandler(this.ctrlSubtraction_Click);
             // 
             // ctrlMultiplication
             // 
@@ -226,6 +227,7 @@
             this.ctrlMultiplication.TabIndex = 15;
             this.ctrlMultiplication.Text = "✕";
             this.ctrlMultiplication.UseVisualStyleBackColor = false;
+            this.ctrlMultiplication.Click += new System.EventHandler(this.ctrlMultiplication_Click);
             // 
             // ctrlDevision
             // 
@@ -237,6 +239,7 @@
             this.ctrlDevision.TabIndex = 16;
             this.ctrlDevision.Text = "÷";
             this.ctrlDevision.UseVisualStyleBackColor = false;
+            this.ctrlDevision.Click += new System.EventHandler(this.ctrlDevision_Click);
             // 
             // ctrlSquareRoot
             // 
@@ -259,6 +262,7 @@
             this.ctrlPower.TabIndex = 18;
             this.ctrlPower.Text = "x^";
             this.ctrlPower.UseVisualStyleBackColor = false;
+            this.ctrlPower.Click += new System.EventHandler(this.ctrlPower_Click);
             // 
             // Form1
             // 
