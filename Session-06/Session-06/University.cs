@@ -3,8 +3,7 @@
 namespace Session06
 {
 
-    public class University : Institute 
-    {
+    public class University : Institute { 
         // properties
 
         public string?[] Students { get; set; }
@@ -57,7 +56,7 @@ namespace Session06
 
 
         }
-        public void SetSchedule(int courseID, int professorID, DateTime dateTime)
+        public void SetSchedule(int courseID, int z)
         {
 
 
