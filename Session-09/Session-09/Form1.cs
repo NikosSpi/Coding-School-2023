@@ -275,6 +275,7 @@ namespace Session_09
                 default:
                     break;
             }
+            ctrlDisplay.Text += _result;
         }
 
         private void ctrlAddition_Click(object sender, EventArgs e)
