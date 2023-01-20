@@ -19,6 +19,22 @@ namespace Session_10
             grvGrades.AutoGenerateColumns = false;
             grvSchedule.AutoGenerateColumns = false;
 
+            PopulateStudent();
+
+            PopulateCourses();
+
+            PopulateGrades();
+
+            PopulateSchedule();
+
+            
+
+            
+
+        }
+
+        private void PopulateStudent()
+        {
             List<Student> students = new List<Student>();
 
             Student student1 = new Student()
@@ -39,14 +55,17 @@ namespace Session_10
             students.Add(student1);
             students.Add(student2);
 
-            grvStudents.DataSource= students;
-
+            bsStudents.DataSource = students;
+        }
+       
+        private void PopulateCourses()
+        {
             List<Courses> courses = new List<Courses>();
 
             Courses courses1 = new Courses()
             {
                 Lesson = "CodeSchool",
-                Teacher = "Fotis Chrysoulas"               
+                Teacher = "Fotis Chrysoulas"
             };
             Courses courses2 = new Courses()
             {
@@ -59,8 +78,11 @@ namespace Session_10
             courses.Add(courses1);
             courses.Add(courses2);
 
-            grvCourses.DataSource = courses;
+            bsCourses.DataSource = courses;
+        }
 
+        private void PopulateGrades()
+        {
             List<Grades> grades = new List<Grades>();
 
             Grades grades1 = new Grades()
@@ -79,8 +101,10 @@ namespace Session_10
             grades.Add(grades1);
             grades.Add(grades2);
 
-            grvGrades.DataSource = grades;
+            bsGrades.DataSource = grades;
+        }
 
+        private void PopulateSchedule() {
             List<Schedule> schedule = new List<Schedule>();
 
             Schedule schedule1 = new Schedule()
@@ -99,17 +123,19 @@ namespace Session_10
             schedule.Add(schedule1);
             schedule.Add(schedule2);
 
-            grvSchedule.DataSource = schedule;
-
+            bsSchedule.DataSource = schedule;
         }
-       
-
         private void label1_Click(object sender, EventArgs e)
         {
 
         }
 
         private void Courses_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bsStudents_CurrentChanged(object sender, EventArgs e)
         {
 
         }
