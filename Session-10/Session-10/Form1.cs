@@ -14,6 +14,11 @@ namespace Session_10
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            grvStudents.AutoGenerateColumns = false;
+            grvCourses.AutoGenerateColumns = false;
+            grvGrades.AutoGenerateColumns = false;
+            grvSchedule.AutoGenerateColumns = false;
+
             List<Student> students = new List<Student>();
 
             Student student1 = new Student()
@@ -34,11 +39,77 @@ namespace Session_10
             students.Add(student1);
             students.Add(student2);
 
-            grvStudents.DataSource= students;   
+            grvStudents.DataSource= students;
+
+            List<Courses> courses = new List<Courses>();
+
+            Courses courses1 = new Courses()
+            {
+                Lesson = "CodeSchool",
+                Teacher = "Fotis Chrysoulas"               
+            };
+            Courses courses2 = new Courses()
+            {
+                Lesson = "Programming",
+                Teacher = "Dimitris Raptodimos"
+            };
+
+
+
+            courses.Add(courses1);
+            courses.Add(courses2);
+
+            grvCourses.DataSource = courses;
+
+            List<Grades> grades = new List<Grades>();
+
+            Grades grades1 = new Grades()
+            {
+                Lesson = "CodeSchool",
+                Teacher = "Fotis Chrysoulas",
+                Grade = "93%"
+            };
+            Grades grades2 = new Grades()
+            {
+                Lesson = "Programming",
+                Teacher = "Dimitris Raptodimos",
+                Grade = "95%"
+            };
+
+            grades.Add(grades1);
+            grades.Add(grades2);
+
+            grvGrades.DataSource = grades;
+
+            List<Schedule> schedule = new List<Schedule>();
+
+            Schedule schedule1 = new Schedule()
+            {
+                Lesson = "CodeSchool",
+                Teacher = "Fotis Chrysoulas",
+                DateTime = "22/1/2023"
+            };
+            Schedule schedule2 = new Schedule()
+            {
+                Lesson = "Programming",
+                Teacher = "Dimitris Raptodimos",
+                DateTime = "23/1/2023"
+            };
+
+            schedule.Add(schedule1);
+            schedule.Add(schedule2);
+
+            grvSchedule.DataSource = schedule;
+
+        }
+       
+
+        private void label1_Click(object sender, EventArgs e)
+        {
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void Courses_Click(object sender, EventArgs e)
         {
 
         }
