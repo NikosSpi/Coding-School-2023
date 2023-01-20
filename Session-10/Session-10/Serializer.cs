@@ -27,7 +27,7 @@ namespace Session_10.Libs
         }
 
 
-        public T Deserialize<T>(string fileName)
+        public T DeserializeFromFile<T>(string fileName)
         {
 
             string jsonString = File.ReadAllText(fileName);

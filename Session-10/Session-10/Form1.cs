@@ -151,10 +151,28 @@ namespace Session_10
         private void btnSave_Click(object sender, EventArgs e)
         {
             Serializer serializer = new Serializer();
+
             serializer.SerializeToFile(_students, "students.json");
-            serializer.SerializeToFile(_courses, "students.json");
-            serializer.SerializeToFile(_grades, "students.json");
-            serializer.SerializeToFile(_schedule, "students.json");
+            serializer.SerializeToFile(_courses, "courses.json");
+            serializer.SerializeToFile(_grades, "grades.json");
+            serializer.SerializeToFile(_schedule, "schedule.json");
+        }
+
+        private void btnLoad_Click(object sender, EventArgs e)
+        {
+            Serializer serializer = new Serializer();
+
+            // Don't deserialize
+
+
+           /* _students = serializer.DeserializeFromFile<Student>("students.json");
+            _courses = serializer.DeserializeFromFile<Courses>("courses.json");
+            _grades = serializer.DeserializeFromFile<Grades>("grades.json");
+            _schedule = serializer.DeserializeFromFile<Schedule>("schedule.json");*/
+
+
+
+
         }
     }
 }
