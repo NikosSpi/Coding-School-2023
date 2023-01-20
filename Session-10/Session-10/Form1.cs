@@ -1,7 +1,15 @@
+using Session_10.Libs;
+using System.ComponentModel.Design.Serialization;
+
 namespace Session_10
 {
     public partial class Form1 : Form
     {
+        private List<Student> _students;
+        private List<Courses> _courses;
+        private List<Grades> _grades;
+        private List<Schedule> _schedule;
+
         public Form1()
         {
             InitializeComponent();
@@ -35,7 +43,7 @@ namespace Session_10
 
         private void PopulateStudent()
         {
-            List<Student> students = new List<Student>();
+            _students = new List<Student>();
 
             Student student1 = new Student()
             {
@@ -52,15 +60,15 @@ namespace Session_10
 
 
 
-            students.Add(student1);
-            students.Add(student2);
+            _students.Add(student1);
+            _students.Add(student2);
 
-            bsStudents.DataSource = students;
+            bsStudents.DataSource = _students;
         }
        
         private void PopulateCourses()
         {
-            List<Courses> courses = new List<Courses>();
+            _courses = new List<Courses>();
 
             Courses courses1 = new Courses()
             {
@@ -75,15 +83,15 @@ namespace Session_10
 
 
 
-            courses.Add(courses1);
-            courses.Add(courses2);
+            _courses.Add(courses1);
+            _courses.Add(courses2);
 
-            bsCourses.DataSource = courses;
+            bsCourses.DataSource = _courses;
         }
 
         private void PopulateGrades()
         {
-            List<Grades> grades = new List<Grades>();
+             _grades = new List<Grades>();
 
             Grades grades1 = new Grades()
             {
@@ -98,14 +106,14 @@ namespace Session_10
                 Grade = "95%"
             };
 
-            grades.Add(grades1);
-            grades.Add(grades2);
+            _grades.Add(grades1);
+            _grades.Add(grades2);
 
-            bsGrades.DataSource = grades;
+            bsGrades.DataSource = _grades;
         }
 
         private void PopulateSchedule() {
-            List<Schedule> schedule = new List<Schedule>();
+            _schedule = new List<Schedule>();
 
             Schedule schedule1 = new Schedule()
             {
@@ -120,10 +128,10 @@ namespace Session_10
                 DateTime = "23/1/2023"
             };
 
-            schedule.Add(schedule1);
-            schedule.Add(schedule2);
+            _schedule.Add(schedule1);
+            _schedule.Add(schedule2);
 
-            bsSchedule.DataSource = schedule;
+            bsSchedule.DataSource = _schedule;
         }
         private void label1_Click(object sender, EventArgs e)
         {
@@ -138,6 +146,15 @@ namespace Session_10
         private void bsStudents_CurrentChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            Serializer serializer = new Serializer();
+            serializer.SerializeToFile(_students, "students.json");
+            serializer.SerializeToFile(_courses, "students.json");
+            serializer.SerializeToFile(_grades, "students.json");
+            serializer.SerializeToFile(_schedule, "students.json");
         }
     }
 }
