@@ -9,7 +9,7 @@
         {
 
             decimal ret = 0;
-            double valx = Convert.ToDouble(x);
+            double valx = parse;
             double valy = Convert.ToDouble(y);  
 
             if (x != null && y != null)

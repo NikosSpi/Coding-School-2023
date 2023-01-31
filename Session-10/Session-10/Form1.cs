@@ -165,10 +165,10 @@ namespace Session_10
             // Don't deserialize
 
 
-           /* _students = serializer.DeserializeFromFile<Student>("students.json");
-            _courses = serializer.DeserializeFromFile<Courses>("courses.json");
-            _grades = serializer.DeserializeFromFile<Grades>("grades.json");
-            _schedule = serializer.DeserializeFromFile<Schedule>("schedule.json");*/
+            /*_students = serializer.DeserializeFromFile<Student>("students.json");
+             _courses = serializer.DeserializeFromFile<Courses>("courses.json");
+             _grades = serializer.DeserializeFromFile<Grades>("grades.json");
+             _schedule = serializer.DeserializeFromFile<Schedule>("schedule.json");*/
 
 
 
